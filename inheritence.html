@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>INHERITENCE</head>
+    <body>
+        <p id="q"></p>
+         <script>
+           class car {
+            constructor(brand){
+                this.brand=brand
+            }
+            present(){
+                return " I have a "+this.brand
+            }
+           }
+
+           class model extends car  {
+            constructor(brand,model){
+                super(brand)
+                this.model=model
+            }
+            show(){
+                return this.present()+" ,It is a "+this.model
+            }
+           }
+           var c1=new model("toyata","camry")
+           document.getElementById("q").innerHTML=c1.show()
+        </script>
+    </body>
+       
+</html>

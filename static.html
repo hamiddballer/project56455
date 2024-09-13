@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>INHERITENCE</head>
+    <body>
+        <p id="hello"></p>
+        <p id="hi"></p>
+        <p id="welcome"></p>
+         <script>
+           class student {
+            constructor(name){
+                this.name=name
+            }
+            static hello(){
+                return "Hello"
+            }
+            static welcome (x){
+                return "welcome"+x.name
+            }
+            hi (){
+                return "hi "+this.name
+            }
+           }
+
+           
+           var s1=new student("Swathi")
+           document.getElementById("hello").innerHTML=student.hello()
+           document.getElementById("hi").innerHTML=s1.hi()
+           document.getElementById("welcome").innerHTML=student.welcome(s1) 
+        </script>
+    </body>
+</html>
